@@ -1,0 +1,43 @@
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename = 'styles/aside.css')}}"
+/>
+
+<div class="aside">
+  <div class="header">
+    <i class="bi bi-printer"></i>
+    <div class="title">
+      <h5>Imprenta POS</h5>
+      <i>Sistema de ventas</i>
+    </div>
+    <i class="bi bi-x-lg"></i>
+  </div>
+  <hr />
+  <div class="user">
+    <div class="blob">{{name[0]}}</div>
+    <div class="desc">
+      <div class="name">{{name}}</div>
+      <div class="role">
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{role}}
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <ul>
+    <li><a class="btn btn-dark" href="#"><i class="bi bi-house"></i>Dashboard</a></li>
+  </ul>
+</div>

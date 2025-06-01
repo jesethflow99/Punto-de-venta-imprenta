@@ -1,0 +1,25 @@
+{% extends 'bases/base.html' %}
+{% block extra_styles %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='styles/dashboard_base.css') }}"
+   rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='styles/header.css') }}"
+   rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='styles/content.css') }}"
+   rel="stylesheet"
+/>
+{% endblock %} 
+ {% block body_base %}
+<div class="grid_container">
+  <div class="header">{% block header %} {% endblock %}</div>
+  <div class="content">{% block content %} {% endblock %}</div>
+  <div class="aside">{% block aside %} {% include 'layouts/aside.html'   %} {% endblock %}</div>
+</div>
+{% endblock %}

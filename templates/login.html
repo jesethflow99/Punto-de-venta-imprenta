@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'styles/login.css')}}">
+    <title>Ingresar</title>
+</head>
+<body>
+    <!-- From Uiverse.io by Smit-Prajapati --> 
+<div class="container">
+    <div class="heading">Ingresar</div>
+    <form action="/auth" class="form" method="post">
+      <input required="" class="input" type="email" name="email" id="email" placeholder="E-mail">
+      <input required="" class="input" type="password" name="password" id="password" placeholder="Password">
+      <span class="forgot-password"><a href="#">Forgot Password ?</a></span>
+      <input class="login-button" type="submit" value="Sign In">
+      
+    </form>
+
+</body>
+</html>

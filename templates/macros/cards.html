@@ -1,0 +1,34 @@
+{% macro cardData(data) %}
+    <div class="card">
+        <div class="top">
+            <p>{{data["title"]}}</p>
+            <i class="bi bi-{{data['icon']}}"></i>
+        </div>
+        <div class="middle">
+            <h2>{{data["number"]}}</h2>
+        </div>
+        <div class="bot">
+            <p>{{data["bot"]}}</p>
+        </div>
+    </div>
+    
+    <style>
+        .card{
+            padding: 10px;
+            max-width: 250px;
+            width: max-content;
+            height: min-content;
+        }
+        .card *{
+            margin: 0 10px;
+            padding: 0;
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+        }
+        .bot{
+            color: var(--bg-dark);
+        }
+    </style>
+{% endmacro %}

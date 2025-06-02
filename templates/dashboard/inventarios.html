@@ -1,0 +1,17 @@
+{% extends 'bases/dashboard_base.html' %}
+
+{% block header %}
+<style>.inventarios{background-color: var(--bg-dark) ;color: var(--color-dark) ;}</style>
+
+    <div class="init">
+        <h3>Gestión de Inventario</h3>
+        <p>Control de materiales y suministros</p>
+    </div>
+    <div class="end">
+        <div class="date btn btn-danger"><i class="bi bi-exclamation-triangle"></i> 1 items bajo minimo</div>
+        <a class="btn btn-dark" href=""><i class="bi bi-plus-lg"></i> Agregar nuevo cliente</a>
+    </div>
+{% endblock %}
+{% block content %}
+    hola desde panel de inventarios
+{% endblock %}

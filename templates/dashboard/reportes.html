@@ -1,0 +1,31 @@
+{% extends 'bases/dashboard_base.html' %}
+
+{% block header %}
+<style>.reportes{background-color: var(--bg-dark) ;color: var(--color-dark) ;}</style>
+
+    <div class="init">
+        <h3>Reportes y Análisis</h3>
+        <p>Estadísticas y métricas del negocio</p>
+    </div>
+    <div class="end">
+        <div class="dropdown">
+            <button
+              class="btn  dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {{role}}
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#"></i>  esta semana</a></li>
+              <li><a class="dropdown-item" href="#"></i>  este mes</a></li>
+              <li><a class="dropdown-item " href="#">este año</a></li>
+            </ul>
+          </div>
+        <a class="btn btn-dark" href=""><i class="bi bi-download"></i> Exportar</a>
+    </div>
+{% endblock %}
+{% block content %}
+    hola desde panel de reportes
+{% endblock %}

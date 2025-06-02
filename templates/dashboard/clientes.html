@@ -1,10 +1,16 @@
 {% extends 'bases/dashboard_base.html' %}
+
 {% block header %}
+<style>.client{background-color: var(--bg-dark) ;color: var(--color-dark) ;}</style>
     <div class="init">
-        <h1>Clientes</h1>
-        <p>Panel de Clientes</p>
+        <h3>Gestión de Clientes</h3>
+        <p>Base de datos de clientes</p>
+    </div>
+    <div class="end">
+        <a class="btn btn-dark" href=""><i class="bi bi-plus-lg"></i> Agregar nuevo cliente</a>
     </div>
 {% endblock %}
 {% block content %}
     hola desde panel de Clientes
+    
 {% endblock %}

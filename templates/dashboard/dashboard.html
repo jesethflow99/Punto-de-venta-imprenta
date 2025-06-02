@@ -1,10 +1,73 @@
+{% from 'macros/cards.html' import cardData   %}
 {% extends 'bases/dashboard_base.html' %}
+
+
 {% block header %}
+<link rel="stylesheet" href="{{url_for('static', filename = 'styles/design/dashboard_menu.css')}}">
+
+<style>.dash{background-color:var(--bg-dark) ;color: var(--color-dark) ;}</style>
     <div class="init">
-        <h1>Administracion</h1>
-        <p>Panel de administracion</p>
+        <h3>Dashboard-imprenta Digital</h3>
+        <p>Panel de control principal</p>
+    </div>
+    <div class="end">
+        <div class="date"><i class="bi bi-calendar"></i> 1/6/2025</div>
+        <button class="btn btn-dark"><i class="bi bi-cart"></i> Nueva venta</button>
     </div>
 {% endblock %}
 {% block content %}
-    hola desde panel de administracion
+    <div class="content_container">
+        <div class="cards">
+            {{cardData({"title":"Ventas hoy","icon":"cart","number":15,"bot":"+12% desde ayer"})}}
+            {{cardData({"title":"Ingresos del dia","icon":"currency-dollar","number":"$ 352","bot":"+8% desde ayer"})}}
+            {{cardData({"title":"Clientes Atendidos","icon":"people","number":12,"bot":"+5% desde ayer"})}}
+            {{cardData({"title":"Productos Vendidos","icon":"box","number":45,"bot":"+15% desde ayer"})}}
+        </div>
+        <div class="aside_dashboard">
+            <h2>Ventas recientes</h2>
+            <p>Últimas ventas del día</p>
+        </div>
+        <div class="body_dashboard">
+            <h2>Estadística de Ventas</h2>
+            <p>Analisis detallado de rendimiento</p>
+            <h3>Ventas por hora</h3>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="date"></th>
+                    <th scope="col" class="bar"></th>
+                    <th scope="col" class="ventas"></th>
+                    <th scope="col" class="price"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>9:00</th>
+                    <td><div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                      </div></td>
+                    <td>3 ventas</td>
+                    <td class="price">$250</td>
+                  </tr>
+                  <tr>
+                    <th>10:00</th>
+                    <td><div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar " style="width: 40%;"></div>
+                      </div></td>
+                    <td>1 ventas</td>
+                    <td class="price">$100</td>
+                  </tr>
+                  <tr>
+                    <th>11:00</th>
+                    <td><div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar "style="width: 50%;"></div>
+                      </div></td>
+                    <td>2 ventas</td>
+                    <td class="price">$250</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>  
+    </div>
+    
 {% endblock %}

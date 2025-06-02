@@ -1,8 +1,14 @@
 {% extends 'bases/dashboard_base.html' %}
+
 {% block header %}
+<style>.ventas{background-color: var(--bg-dark) ;color: var(--color-dark) ;}</style>
+
     <div class="init">
-        <h1>Ventas</h1>
-        <p>Panel de Ventas</p>
+        <h3>Punto de venta</h3>
+        <p>Registrar nueva venta</p>
+    </div>
+    <div class="end">
+        <div class="date"><i class="bi bi-cart"></i> 0 items</div>
     </div>
 {% endblock %}
 {% block content %}

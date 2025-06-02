@@ -1,8 +1,30 @@
+
 .aside{
     grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    color: var(--color);
+
+    .header{
+        gap: 5px;
+        margin-top: 15px;
+    }
+ 
+    .dropdown-menu{
+        p{
+            width: 100%;
+            text-align: center;
+        }
+        a:hover{
+            background-color: var(--bg-dark);
+            color: var(--color-dark);
+        }
+    }
 }
-.header{
-    gap: 5px;
+hr{
+    width: 100%;
 }
 
 .bi-printer{
@@ -12,34 +34,65 @@
 .user{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
+    width: 100%;
+    gap: 25px;
     button{
         padding: 2px;
         font-size: x-small;
 
     }
-}
-
-.blob {
-  border-radius: 100%;
-  background-color: aqua;
-  color: blue;
-  width: 4rem;
-  height: 4rem; /* Match de la altura con el ancho para que sea un círculo */
-  
-  display: flex;
-  align-items: center;   /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-
-  font-size: 2.5rem;
-  font-weight: 500;
-  padding: 3px;
+    .blob {
+        border-radius: 100%;
+        background-color: rgb(59, 59, 59);
+        color: rgb(88, 222, 255);
+        width: 3rem;
+        height: 3rem; 
+        
+        display: flex;
+        align-items: center;  
+        justify-content: center; 
+      
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 3px;
+      }
 }
 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     width: 100%;
+
+    li{
+        width: 100%;
+    }
+    a{
+    width: 100%;
+
+    }
+}
+
+a.btn {
+    justify-content: flex-start;
+    text-align: left;
     display: flex;
     align-items: center;
-}
-a{
-    width: 100%;
+    gap: 0.5rem;
+  }
+  a.btn:hover{
+    background-color: var(--bg-dark);
+    color: var(--color-dark );
+  }
+  .footer {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+    word-break: break-word;
+  }
+.footer{
+    color: var(--bg-dark);
 }

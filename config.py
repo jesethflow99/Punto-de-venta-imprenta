@@ -1,4 +1,4 @@
-
 class Config:
-    DATABASE_URI='sqlite///data/data.db'
     DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///data.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False  # Evita warning innecesario

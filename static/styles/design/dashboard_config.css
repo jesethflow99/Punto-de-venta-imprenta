@@ -1,0 +1,44 @@
+.configuration{
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    flex-direction: column;
+
+    .nav, .body{
+        border-radius: 20px;
+        padding: 20px;
+        outline: 1px solid rgba(0, 0, 0, 0.308);
+    }
+    .nav{
+        height: 100px;
+
+    }
+    .body{
+        height: 100%;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .carousel,.carousel-inner,.carousel-item{
+        height: 100%;
+        
+    }
+    .btn{
+            margin-top: 50px;
+        }
+    .sect1{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+    .sect1 .mb-3{
+        flex-basis: 45%;
+    }
+}

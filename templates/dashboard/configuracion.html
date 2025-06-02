@@ -1,16 +1,106 @@
-{% extends 'bases/dashboard_base.html' %}
+{% extends 'bases/dashboard_base.html' %} {% block header %}
+<style>
+  .configuracion {
+    background-color: var(--bg-dark);
+    color: var(--color-dark);
+  }
+</style>
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename = 'styles/design/dashboard_config.css')}}"
+/>
 
-{% block header %}
-<style>.configuracion{background-color: var(--bg-dark) ;color: var(--color-dark) ;}</style>
+<div class="init">
+  <h3>Configuración del Sistema</h3>
+  <p>Ajustes y preferencias del punto de venta</p>
+</div>
+<div class="end">
+  <div class="date"><i class="bi bi-gear"></i> Panel de administración</div>
+</div>
+{% endblock %} {% block content %}
+<div class="configuration">
+  <div class="nav">
+    <button
+      type="button"
+      class="active btn btn-outline-secondary"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
 
-    <div class="init">
-        <h3>Configuración del Sistema</h3>
-        <p>Ajustes y preferencias del punto de venta</p>
+      aria-current="true"
+      aria-label="Slide 1"
+    >
+      Negocio
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    >
+      Impresoras
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    >
+      Usuarios
+    </button>
+  </div>
+  <div class="body">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="negocio">
+                <form action="">
+                    <h2><i class="bi bi-building"></i> Informacion del negocio</h2>
+                    <p>Datos Basicos de la empresa</p>
+                    <div class="sect1">
+                        <div class="mb-3">
+                    <label for="basic-url" class="form-label">Nombre de la Empresa</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="basic-url" class="form-label">RUC/NIT</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="basic-url" class="form-label">Telefono</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                    </div>
+
+                    <div class="mb-3">
+                    <label for="basic-url" class="form-label">Email</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                    </div>
+                    <div class="input-group">
+                    <label for="basic-url" class="form-label">Direccion</label>
+                    <div class="input-group">
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    </div>
+                    </div>
+                    <button class="btn btn-dark w-100"><i class="bi bi-floppy"></i> Guardar Configuración</button>
+                </form>
+            </div>
+        </div>
+        <div class="carousel-item">configuracion de impresoras</div>
+        <div class="carousel-item">gestion de usuarios</div>
+      </div>
     </div>
-    <div class="end">
-        <div class="date"><i class="bi bi-gear"></i> Panel de administración</div>
-    </div>
-{% endblock %}
-{% block content %}
-    hola desde panel de configuracion
+  </div>
+</div>
 {% endblock %}

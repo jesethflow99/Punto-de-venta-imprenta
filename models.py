@@ -84,10 +84,3 @@ class ConfiguracionSistema(ModelBase):
     clave = db.Column(db.String(50), unique=True, nullable=False)
     valor = db.Column(db.String(255))
 
-# ---------------- INFORMACION DEL NEGOCIO ----------------
-class BussinesConfig(ModelBase):
-    name = db.Column(db.String(50),default='Imprenta POS')
-    phone = db.Column(db.String(50),default='No establecido')
-    email = db.Column(db.String(50),default='No establecido')
-    address = db.Column(db.String(50),default='No establecido')
-    RUC = db.Column(db.String(20),nullable=True,default='No establecido')

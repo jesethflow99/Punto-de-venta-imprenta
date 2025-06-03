@@ -1,14 +1,41 @@
-from flask import Flask, redirect, url_for,render_template
+from flask import Flask, redirect, url_for,render_template,request
 from blueprints.auth import auth
 from blueprints.dashboard import dashboard
 from config import Config
 from models import db
+from load_info.config_info import get_dataConfig,set_dataConfig
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
-app.register_blueprint(auth, url_prefix='/auth')  # Asegúrate del slash inicial
+app.register_blueprint(auth, url_prefix='/auth')  
 app.register_blueprint(dashboard,url_prefix='/dashboard')
+
+@app.context_processor
+def inject_config():
+    config = get_dataConfig()
+    return dict(config_negocio=config)
+
+from flask import request, redirect, url_for
+
+@app.route("/saveConfig", methods=["POST"])
+def SaveConfig():
+    data = {
+        "name": request.form.get("name", "").strip(),
+        "RUC": request.form.get("RUC", "").strip(),
+        "phone": request.form.get("phone", "").strip(),
+        "email": request.form.get("email", "").strip(),
+        "address": request.form.get("address", "").strip()
+    }
+
+    set_dataConfig(data)
+
+    return redirect(url_for('dashboard.configuracion'))
+
+    
+    
+
 
 @app.route('/')
 def index():

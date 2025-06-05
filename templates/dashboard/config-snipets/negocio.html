@@ -1,0 +1,42 @@
+<div class="negocio">
+    <form action="/saveConfig" method="post">
+        <h2><i class="bi bi-building"></i> Informacion del negocio</h2>
+        <p>Datos Basicos de la empresa</p>
+        <div class="sect1">
+            <div class="mb-3">
+        <label for="basic-url" class="form-label">Nombre de la Empresa</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.name}}" name="name">
+        </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="basic-url" class="form-label">RUC/NIT</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.RUC}}" name="RUC">
+        </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="basic-url" class="form-label">Telefono</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.phone}}" name="phone">
+        </div>
+        </div>
+
+        <div class="mb-3">
+        <label for="basic-url" class="form-label">Email</label>
+        <div class="input-group">
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.email}}" name="email">
+        </div>
+        </div>
+        <div class="input-group">
+        <label for="basic-url" class="form-label">Direccion</label>
+        <div class="input-group">
+        <textarea class="form-control" aria-label="With textarea" placeholder="{{config_negocio.address}}" name="address"></textarea>
+        </div>
+        </div>
+        </div>
+        <button class="btn btn-dark w-100"><i class="bi bi-floppy"></i> Guardar Configuración</button>
+    </form>
+</div>

@@ -108,121 +108,29 @@
     <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="negocio">
-                <form action="/saveConfig" method="post">
-                    <h2><i class="bi bi-building"></i> Informacion del negocio</h2>
-                    <p>Datos Basicos de la empresa</p>
-                    <div class="sect1">
-                        <div class="mb-3">
-                    <label for="basic-url" class="form-label">Nombre de la Empresa</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.name}}" name="name">
-                    </div>
-                    </div>
-
-                    <div class="mb-3">
-                    <label for="basic-url" class="form-label">RUC/NIT</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.RUC}}" name="RUC">
-                    </div>
-                    </div>
-
-                    <div class="mb-3">
-                    <label for="basic-url" class="form-label">Telefono</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.phone}}" name="phone">
-                    </div>
-                    </div>
-
-                    <div class="mb-3">
-                    <label for="basic-url" class="form-label">Email</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="{{config_negocio.email}}" name="email">
-                    </div>
-                    </div>
-                    <div class="input-group">
-                    <label for="basic-url" class="form-label">Direccion</label>
-                    <div class="input-group">
-                    <textarea class="form-control" aria-label="With textarea" placeholder="{{config_negocio.address}}" name="address"></textarea>
-                    </div>
-                    </div>
-                    </div>
-                    <button class="btn btn-dark w-100"><i class="bi bi-floppy"></i> Guardar Configuración</button>
-                </form>
-            </div>
+            {% include 'dashboard/config-snipets/negocio.html'   %}
         </div>
-        <div class="carousel-item">configuracion de impresoras</div>
+        <div class="carousel-item">
+          {% include 'dashboard/config-snipets/impresoras.html'%}
+        </div>
         <div class="carousel-item usuarios">
-          <div class="head">
-            <h2><i class="bi bi-people"></i> Gestion de Usuarios</h2>
-            <p>Administrar Empleados y Servicios</p>
-            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <i class="bi bi-plus"></i> Nuevo Usuario
-            </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form action="">
-
-                      <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Nombre</span>
-                        <input type="text" class="form-control" placeholder="Nombre de usuario" aria-label="Username" aria-describedby="basic-addon1">
-                      </div>
-
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-dark">Guardar</button>
-                      </div>
-                    </form>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>John</td>
-                <td>Doe</td>
-                <td>@social</td>
-              </tr>
-            </tbody>
-          </table>
+            {% include 'dashboard/config-snipets/usuarios.html'%}
         </div>
-        <div class="carousel-item">gestion de Servicios</div>
-        <div class="carousel-item">gestion de Facturacion</div>
-        <div class="carousel-item">gestion de Alertas</div>
-        <div class="carousel-item">gestion de Bases de datos</div>
-        <div class="carousel-item">gestion de Sistema</div>
+        <div class="carousel-item">
+          {% include 'dashboard/config-snipets/servicios.html'%}
+        </div>
+        <div class="carousel-item">
+          {% include 'dashboard/config-snipets/facturacion.html'%}
+        </div>
+        <div class="carousel-item">
+          {% include 'dashboard/config-snipets/alertas.html'%}
+        </div>
+        <div class="carousel-item">
+          {% include 'dashboard/config-snipets/bases-de-datos.html'%}
+        </div>
+        <div class="carousel-item">
+          {% include 'dashboard/config-snipets/sistema.html'%}
+        </div>
       </div>
     </div>
   </div>

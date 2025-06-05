@@ -1,5 +1,6 @@
 import os
 import json
+from models import db,User,Product,ProductCategory
 
 # Ruta del archivo de configuración
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "../config_files/negocio.json")
@@ -44,10 +45,11 @@ def get_dataConfig():
         print(json.dumps(data, indent=4, ensure_ascii=False))
         return data
 
-# Test rápido
-#if __name__ == "__main__":
-#   config = get_dataConfig()
+def load_data():
+    data = {
+        "users":User.query.all(),
+    }   
+    return data
 
-    # Puedes editarlo aquí si quieres hacer pruebas
-    # config["name"] = "Nuevo nombre"
-    # set_dataConfig(config)
+
+

@@ -8,6 +8,10 @@ class ModelBase(db.Model):
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, server_default=db.func.now(), onupdate=db.func.now())
 
+    def to_dict(self):
+        """Convierte los atributos del modelo en un diccionario."""
+        return {column.name: getattr(self, column.name) for column in self.__table__.columns}
+
 # ----------------- USERS -----------------
 class Roles:
     ADMIN = "admin",
@@ -17,7 +21,7 @@ class User(ModelBase):
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(100), unique=True, nullable=False)
     password = db.Column(db.String(256), nullable=True)
-    role_id = db.Column(db.String(5), default=Roles.USER, nullable=False)
+    role = db.Column(db.String(5), default=Roles.USER, nullable=False)
 
 # ----------------- CLIENTS -----------------
 class Client(ModelBase):

@@ -37,8 +37,11 @@ def category():
   if request.method =="POST":
     try:
       name = request.form.get("name")
-      category = ProductCategory(name)
+      print(name)
+      category = ProductCategory(name=name)
+      print(category)
       db.session.add(category)
+      db.session.commit()
       flash("Categoria agregada con exito","success")
     except:
       flash("No se pudo agregar la categoria ","danger")  

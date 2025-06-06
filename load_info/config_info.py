@@ -45,6 +45,8 @@ def get_dataConfig():
 def load_data():
     data = {
         "users":User.query.all(),
+        "categories":ProductCategory.query.all(),
+        "products":Product.query.all()
     }   
     return data
 

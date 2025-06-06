@@ -1,0 +1,111 @@
+<div class="servicios">
+  <h2>$ Servicios y precios</h2>
+  <p>Gestionar catalogo de servicios</p>
+  <div class="buttons">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#AgregarServicio">
+      <i class="bi bi-plus"></i> Agregar Servicio
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="AgregarServicio" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Servicio</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <!--formulario-->
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="$-">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Stock</label>
+                <input type="number" class="form-control" id="exampleInputEmail1">
+              </div>
+              
+              <select class="form-select" aria-label="Default select example">
+                <option selected value="Mt">Tipo de unidad</option>
+                <option value="Mt">Metro lineal</option>
+                <option value="Mt2">Metro cuadrado</option>
+                <option value="pz">Pieza</option>
+                <option value="servicio">Servicio</option>
+              </select>
+
+              <!-- fin formulario-->
+              
+            
+          </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-dark">Guardar</button>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+     <!-- Button trigger modal -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#AgregarCategoria">
+      <i class="bi bi-plus"></i> Agregar Categoria
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="AgregarCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Categoria</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+  </div>
+
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>John</td>
+        <td>Doe</td>
+        <td>@social</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

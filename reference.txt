@@ -1,0 +1,77 @@
+📦punto de venta
+ ┣ 📂blueprints
+ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┣ 📜auth.cpython-312.pyc
+ ┃ ┃ ┣ 📜auth.cpython-313.pyc
+ ┃ ┃ ┣ 📜dashboard.cpython-312.pyc
+ ┃ ┃ ┣ 📜dashboard.cpython-313.pyc
+ ┃ ┃ ┣ 📜users.cpython-312.pyc
+ ┃ ┃ ┣ 📜users.cpython-313.pyc
+ ┃ ┃ ┣ 📜__init__.cpython-312.pyc
+ ┃ ┃ ┗ 📜__init__.cpython-313.pyc
+ ┃ ┣ 📜auth.py
+ ┃ ┣ 📜dashboard.py
+ ┃ ┣ 📜products.py
+ ┃ ┣ 📜users.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂config_files
+ ┃ ┗ 📜negocio.json
+ ┣ 📂instance
+ ┃ ┗ 📜data.db
+ ┣ 📂load_info
+ ┃ ┣ 📂__pycache__
+ ┃ ┃ ┣ 📜config_info.cpython-312.pyc
+ ┃ ┃ ┣ 📜config_info.cpython-313.pyc
+ ┃ ┃ ┣ 📜__init__.cpython-312.pyc
+ ┃ ┃ ┗ 📜__init__.cpython-313.pyc
+ ┃ ┣ 📜config_info.py
+ ┃ ┣ 📜dashboard_info.py
+ ┃ ┗ 📜__init__.py
+ ┣ 📂static
+ ┃ ┗ 📂styles
+ ┃ ┃ ┣ 📂design
+ ┃ ┃ ┃ ┣ 📜dashboard_config.css
+ ┃ ┃ ┃ ┗ 📜dashboard_menu.css
+ ┃ ┃ ┣ 📜aside.css
+ ┃ ┃ ┣ 📜base.css
+ ┃ ┃ ┣ 📜content.css
+ ┃ ┃ ┣ 📜dashboard_base.css
+ ┃ ┃ ┣ 📜header.css
+ ┃ ┃ ┗ 📜login.css
+ ┣ 📂templates
+ ┃ ┣ 📂bases
+ ┃ ┃ ┣ 📜base.html
+ ┃ ┃ ┣ 📜content_base.html
+ ┃ ┃ ┗ 📜dashboard_base.html
+ ┃ ┣ 📂dashboard
+ ┃ ┃ ┣ 📂config-snipets
+ ┃ ┃ ┃ ┣ 📜alertas.html
+ ┃ ┃ ┃ ┣ 📜bases-de-datos.html
+ ┃ ┃ ┃ ┣ 📜facturacion.html
+ ┃ ┃ ┃ ┣ 📜impresoras.html
+ ┃ ┃ ┃ ┣ 📜negocio.html
+ ┃ ┃ ┃ ┣ 📜servicios.html
+ ┃ ┃ ┃ ┣ 📜sistema.html
+ ┃ ┃ ┃ ┗ 📜usuarios.html
+ ┃ ┃ ┣ 📜clientes.html
+ ┃ ┃ ┣ 📜configuracion.html
+ ┃ ┃ ┣ 📜dashboard.html
+ ┃ ┃ ┣ 📜facturas.html
+ ┃ ┃ ┣ 📜inventarios.html
+ ┃ ┃ ┣ 📜reportes.html
+ ┃ ┃ ┗ 📜ventas.html
+ ┃ ┣ 📂layouts
+ ┃ ┃ ┗ 📜aside.html
+ ┃ ┣ 📂macros
+ ┃ ┃ ┗ 📜cards.html
+ ┃ ┣ 📜404.html
+ ┃ ┗ 📜login.html
+ ┣ 📜.env
+ ┣ 📜.gitignore
+ ┣ 📜app.py
+ ┣ 📜config.py
+ ┣ 📜launch.py
+ ┣ 📜models.py
+ ┣ 📜reference.txt
+ ┣ 📜requirements.txt
+ ┗ 📜__init__.py

@@ -35,14 +35,11 @@ def set_dataConfig(data):
 # Carga los datos desde el JSON
 def get_dataConfig():
     if not os.path.exists(CONFIG_PATH):
-        print("⚠️ Configuración no encontrada, creando archivo por defecto.")
         set_dataConfig(DEFAULT_CONFIG)
         return DEFAULT_CONFIG
 
     with open(CONFIG_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
-        print("📦 Configuración actual:")
-        print(json.dumps(data, indent=4, ensure_ascii=False))
         return data
 
 def load_data():

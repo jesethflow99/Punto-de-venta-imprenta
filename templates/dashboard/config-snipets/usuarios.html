@@ -16,22 +16,22 @@
         </div>
         <div class="modal-body">
           <form action="/users" method="POST">
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">Nombre</span>
+            <div class=" mb-3">
+              <label class="form-label" id="basic-addon1">Nombre</label>
               <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="name" required>
             </div>
 
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">Correo</span>
+            <div class=" mb-3">
+              <label class="form-label" id="basic-addon1">Correo</label>
               <input type="email" class="form-control"  aria-label="email" aria-describedby="basic-addon1" name="email" required>
             </div>
 
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">contraseña</span>
+            <div class=" mb-3">
+              <label class="form-label" id="basic-addon1">contraseña</label>
               <input type="password" class="form-control" aria-label="Password" aria-describedby="basic-addon1" name="password" required>
             </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">Rol</span>
+            <div class=" mb-3">
+              <label class="form-label" id="basic-addon1">Rol</label>
             <select name="role" class="form-select" aria-label="Default select example">
               <option selected value="user">Usuario</option>
               <option value="admin">Adminisrador</option>
@@ -84,18 +84,18 @@
       </div>
       <div class="modal-body">
         <form action="/users/update/{{user.id}}" method="POST">
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Nombre</span>
+          <div class=" mb-3">
+            <label class="form-label" id="basic-addon1">Nombre</label>
             <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="{{user.name}}" name="name">
           </div>
   
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Correo</span>
+          <div class=" mb-3">
+            <label class="form-label" id="basic-addon1">Correo</label>
             <input type="email" class="form-control" value="{{user.email}}" aria-label="email" aria-describedby="basic-addon1" name="email">
           </div>
   
-          <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">contraseña</span>
+          <div class=" mb-3">
+            <label class="form-label" id="basic-addon1">contraseña</label>
             <input type="password" class="form-control" aria-label="Password" aria-describedby="basic-addon1" placeholder="----------" name="password">
           </div>
   

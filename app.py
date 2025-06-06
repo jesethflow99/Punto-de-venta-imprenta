@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for,render_template,request
 from blueprints.auth import auth
 from blueprints.dashboard import dashboard
 from blueprints.users import users
+from blueprints.products import products
 from config import Config
 from models import db
 from load_info.config_info import get_dataConfig,set_dataConfig
@@ -13,6 +14,7 @@ db.init_app(app)
 app.register_blueprint(auth, url_prefix='/auth')  
 app.register_blueprint(dashboard,url_prefix='/dashboard')
 app.register_blueprint(users,url_prefix="/users")
+app.register_blueprint(products,url_prefix="/products")
 
 @app.context_processor
 def inject_config():

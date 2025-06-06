@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.dialects.postgresql import JSON
 
 db = SQLAlchemy()
 
@@ -35,16 +36,14 @@ class Client(ModelBase):
 class ProductCategory(ModelBase):
     name = db.Column(db.String(100), nullable=False)
 
-class Supplier(ModelBase):
-    name = db.Column(db.String(100), nullable=False)
-    phone = db.Column(db.String(100))
-
 class Product(ModelBase):
     name = db.Column(db.String(100), nullable=False)
     price = db.Column(db.Float, nullable=False)
     stock = db.Column(db.Integer, nullable=False, default=0)
+    unit_type = db.Column(db.String(50), nullable=False, default='pz')  # pieza, metro, m2, servicio, etc.
     category_id = db.Column(db.Integer, db.ForeignKey('product_category.id'))
-    supplier_id = db.Column(db.Integer, db.ForeignKey('supplier.id'))
+
+
 
 # ----------------- ORDERS -----------------
 class Order(ModelBase):

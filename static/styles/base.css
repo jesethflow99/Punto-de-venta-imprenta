@@ -19,3 +19,12 @@ ul{
 a{
     text-decoration: none;
 }
+.alert {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* Asegura que quede encima del resto */
+    max-width: 90%;
+    width: fit-content;
+}

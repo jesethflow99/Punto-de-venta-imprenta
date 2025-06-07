@@ -1,5 +1,7 @@
 from flask import Blueprint, request, redirect, url_for, jsonify,flash
 from models import db, User
+from schemas import UserSchema
+from marshmallow import ValidationError
 
 users = Blueprint("users", __name__)
 
@@ -11,19 +13,20 @@ def users_table():
         return jsonify([u.to_dict() for u in data])
     if request.method == "POST":
         try:
-            name = request.form.get("name")
-            email = request.form.get("email")
-            password = request.form.get("password")
-            role = request.form.get("role")
-            flash("Usuario agregado por exito","success")
-            user = User(name=name, email=email, password=password, role=role)
+            user_schema = UserSchema()
+            data = user_schema.load(request.form.to_dict())
+            user = User(**data)
             db.session.add(user)
             db.session.commit()
+            flash("Usuario agregado con exito","success")
             return redirect(url_for("dashboard.configuracion"))
-        except:
-            flash("No se pudo agregar el usuario","danger")
-        
-        return redirect(url_for("dashboard.configuracion"))
+        except ValidationError as err:
+            flash(f"Errores de validación: {err.messages}", "danger")
+            return redirect(url_for("dashboard.configuracion"))
+        except Exception as e:
+            flash("No se pudo agregar el usuario", "danger")
+            print(e)
+            return redirect(url_for("dashboard.configuracion"))
 
 
 # --- UPDATE por ID ---

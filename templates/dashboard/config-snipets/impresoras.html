@@ -1,0 +1,25 @@
+<h2>Gestión de impresoras</h2>
+<p>Configurar impresoras conectadas al sistema</p>
+<hr>
+<form action="/config/printers" method="POST" class="row g-3">
+  <div class="col-md-4">
+    <label for="facturas">Impresora para facturación</label>
+    <select id="facturas" name="factura_printer" class="form-select" aria-label="Default select example">
+        <option selected value="{{config_printers['factura_printer']}}">{{config_printers["factura_printer"]}}</option>
+        {% for printer in printers %}
+            <option value="{{printer}}">{{printer}}</option>
+        {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-4">
+    <label for="recibos">Impresora para Recibos</label>
+    <select id="recibos" name="order_printer" class="form-select" aria-label="Default select example">
+        <option selected value="{{config_printers['order_printer']}}" >{{config_printers["order_printer"]}}</option>
+        {% for printer in printers %}
+            <option value="{{printer}}">{{printer}}</option>
+        {% endfor %}
+    </select>
+  </div>
+ 
+  <button type="submit" class="btn btn-dark mt-3">Guardar</button>
+</form>
